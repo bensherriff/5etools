@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  5etools:
+    image: 5etools
+    container_name: 5etools
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:80"
